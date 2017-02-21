@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <jp.wasabeef.richeditor.RichEditor
+        android:id="@+id/rich_editor"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:text="空白区域" />
+
+    <LinearLayout
+        android:id="@+id/ll_menu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_input"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="输入消息" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/bt_emjon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="表情" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/bt_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="菜单" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+        <!--表情、贴图控件-->
+        <com.lqr.emoji.EmoticonPickerView
+            android:id="@+id/epv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="菜单区域" />
+    </FrameLayout>
+
+</LinearLayout>
